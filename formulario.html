@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Pesquisa de Satisfação</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      background-color: #0077cc;
+      color: white;
+      padding: 15px 0;
+    }
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #0077cc;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .submit-container {
+      text-align: center;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pesquisa de Satisfação</h1>
+  <form action="#" method="post">
+    <!-- Parte A: Dados pessoais -->
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+    </fieldset>
+    <!-- Parte B: Pesquisa -->
+    <fieldset>
+      <legend>Pesquisa</legend>
+      <label>1. Como você avalia o nosso atendimento?</label>
+      <input type="radio" id="excelente" name="atendimento" value="excelente" required>
+      <label for="excelente">Excelente</label>
+      <input type="radio" id="bom" name="atendimento" value="bom">
+      <label for="bom">Bom</label>
+      <input type="radio" id="regular" name="atendimento" value="regular">
+      <label for="regular">Regular</label>
+      <label>2. Você recomendaria nossos serviços a outras pessoas?</label>
+      <input type="radio" id="sim" name="recomendacao" value="sim" required>
+      <label for="sim">Sim</label>
+      <input type="radio" id="nao" name="recomendacao" value="nao">
+      <label for="nao">Não</label>
+      <label for="experiencia">3. Qual foi sua experiência geral?</label>
+      <select id="experiencia" name="experiencia" required>
+        <option value="">Selecione...</option>
+        <option value="muito_satisfeito">Muito satisfeito</option>
+        <option value="satisfeito">Satisfeito</option>
+        <option value="neutro">Neutro</option>
+        <option value="insatisfeito">Insatisfeito</option>
+        <option value="muito_insatisfeito">Muito insatisfeito</option>
+      </select>
+    </fieldset>
+    <!-- Autorização -->
+    <label>
+      <input type="checkbox" name="autorizacao" required>
+      Autorizo o compartilhamento das minhas respostas com terceiros.
+    </label>
+    <div class="submit-container">
+      <button type="submit">Enviar Respostas</button>
+    </div>
+  </form>
+</body>
+</html>
