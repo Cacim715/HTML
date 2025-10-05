@@ -1,0 +1,43 @@
+1️⃣ Análise da URL:
+
+URL:
+https://www.nytimes.com/2023/08/28/science/birds-flycatcher-migration.html
+
+Componentes:
+
+Protocolo:
+https://
+Indica que a comunicação entre o navegador e o servidor é segura, utilizando o protocolo HTTPS (Hypertext Transfer Protocol Secure).
+
+Domínio:
+www.nytimes.com
+Representa o nome do servidor ou site, neste caso, o The New York Times.
+
+Caminho:
+/2023/08/28/science/birds-flycatcher-migration.html
+Especifica o local exato do recurso no servidor, indicando que é um artigo publicado em 28 de agosto de 2023, na seção de ciência, sobre migração de pássaros flycatcher.
+
+Parâmetros:
+Não há parâmetros na URL fornecida.
+Parâmetros geralmente aparecem após o símbolo ? e são usados para passar informações adicionais ao servidor, como filtros ou identificadores.
+
+2️⃣ O "Tripé da Web": HTML, CSS e JavaScript
+
+As três tecnologias fundamentais para o desenvolvimento web são:
+
+1-HTML (Hypertext Markup Language):
+É a espinha dorsal da web, fornecendo a estrutura básica das páginas.
+Define elementos como títulos, parágrafos, listas e links.
+Sem HTML, não haveria conteúdo visível na web.
+
+2-CSS (Cascading Style Sheets):
+Responsável pela aparência visual das páginas.
+Permite estilizar elementos HTML, controlando cores, fontes, espaçamentos e layouts.
+Sem CSS, as páginas seriam exibidas de forma simples e sem formatação.
+
+3-JavaScript:
+Adiciona interatividade e dinamismo às páginas.
+Permite ações como validação de formulários, animações e atualizações de conteúdo sem recarregar a página.
+Sem JavaScript, as páginas seriam estáticas e sem interatividade.
+
+Essas três tecnologias trabalham juntas para criar experiências web ricas e funcionais.
