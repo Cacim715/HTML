@@ -33,4 +33,18 @@ Linha 1<br>Linha 2
 (Bônus) <hr> — insere uma linha horizontal.
 
 <hr>
+
+3- <h1>Bem vindo</h1>
+
+<p>
+
+Seja bem vindo a essa página, terráqueo. Tenho uma <a href="https://www.youtube.com/watch? v=dQw4w9WgXcQ">surpresa</a> pra vc. 
+
+</p>
+*Esse código abre uma página com um uma ancora para o youtube.
+
+
+
+
+
  
