@@ -1,0 +1,15 @@
+1. Papel de uma máquina cliente e uma máquina servidor na Internet
+
+Cliente: é o computador ou dispositivo que solicita serviços ou informações de outro computador na rede. Exemplo: quando você acessa um site no navegador, seu computador é o cliente que pede os dados ao servidor.
+
+Servidor: é a máquina que fornece serviços ou informações aos clientes. Exemplo: um servidor web que entrega páginas HTML, imagens e arquivos para os navegadores dos usuários.
+
+Em resumo: cliente pede, servidor responde.
+
+2. O que são domínios e por que são importantes
+
+Domínios são nomes amigáveis que identificam computadores ou serviços na Internet, como google.com ou youtube.com.
+
+Importância: Eles substituem os endereços IP, que são difíceis de memorizar, tornando mais fácil para as pessoas acessar sites sem precisar decorar números. Além disso, domínios permitem organização e identificação de sites na web.
+
+3. 2800:3f0:4004:80d::2003:
