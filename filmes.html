@@ -1,0 +1,209 @@
+<!--
+Instruções rápidas para usar este arquivo no GitHub:
+1. Crie um repositório novo no GitHub (público ou privado).
+2. Clone-o localmente: git clone https://github.com/SEU_USUARIO/NOME_REPO.git
+3. Copie este arquivo como filmes.html para a pasta do repositório.
+4. Crie uma pasta chamada "images" dentro do repositório e coloque pelo menos 6 imagens locais (ex: inception.jpg, shawshank.jpg, godfather.jpg, spiritedaway.jpg, parasite.jpg, pulpfiction.jpg).
+5. git add .
+6. git commit -m "Adicionar galeria de filmes"
+7. git push origin main
+
+Para publicar com GitHub Pages (opcional):
+- Vá em Settings > Pages e escolha a branch main e a pasta root (/). Salve.
+- A página geralmente ficará disponível em: https://SEU_USUARIO.github.io/NOME_REPO/filmes.html
+
+Substitua SEU_USUARIO e NOME_REPO pelos seus dados do GitHub.
+--> 
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria — Meus Filmes Favoritos</title>
+  <style>
+    /* Estilos simples para a galeria */
+    :root{
+      --gap: 16px;
+      --card-bg: #ffffff;
+      --page-bg: #f4f4f8;
+      --max-width: 1100px;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    body{
+      margin:0;
+      background:var(--page-bg);
+      display:flex;
+      justify-content:center;
+      padding:40px 16px;
+      color:#111;
+    }
+    .container{
+      max-width:var(--max-width);
+      width:100%;
+    }
+    header{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    h1{margin:0 0 6px 0;font-size:28px}
+    p.lead{margin:0;color:#444}
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:var(--gap);
+      align-items:start;
+    }
+    .card{
+      background:var(--card-bg);
+      border-radius:10px;
+      padding:10px;
+      box-shadow:0 6px 18px rgba(15,15,30,0.06);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .thumb{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      border-radius:6px;
+      display:block;
+    }
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+    }
+    .title{font-weight:600;font-size:16px;margin:0}
+    .year{color:#666;font-size:13px}
+    .links{display:flex;gap:8px}
+    .links a{
+      text-decoration:none;
+      font-size:13px;
+      color:#0b63d6;
+    }
+    footer{margin-top:20px;text-align:center;color:#666;font-size:13px}
+
+    /* responsividade: aumentar gap em telas maiores */
+    @media(min-width:900px){
+      :root{--gap:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Minha Galeria de Filmes Favoritos</h1>
+      <p class="lead">Cada pôster está armazenado localmente e linka para a página da Wikipedia do filme.</p>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <!-- Cartão 1 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/A_origem" target="_blank" rel="noopener noreferrer">
+            <img src="images/inception.jpg" alt="Pôster do filme A Origem (Inception)" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">A Origem (Inception)</p>
+              <p class="year">2010</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/A_origem" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartão 2 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/Um_estranho_no_ninho" target="_blank" rel="noopener noreferrer">
+            <img src="images/shawshank.jpg" alt="Pôster do filme Um Sonho de Liberdade (The Shawshank Redemption)" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">Um Sonho de Liberdade</p>
+              <p class="year">1994</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/Um_estranho_no_ninho" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartão 3 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/O_Poderoso_Chef%C3%A3o" target="_blank" rel="noopener noreferrer">
+            <img src="images/godfather.jpg" alt="Pôster O Poderoso Chefão" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">O Poderoso Chefão</p>
+              <p class="year">1972</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/O_Poderoso_Chef%C3%A3o" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartão 4 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/A_viagem_de_Chihiro" target="_blank" rel="noopener noreferrer">
+            <img src="images/spiritedaway.jpg" alt="Pôster A Viagem de Chihiro (Spirited Away)" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">A Viagem de Chihiro</p>
+              <p class="year">2001</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/A_viagem_de_Chihiro" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartão 5 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/Parasita_(filme)" target="_blank" rel="noopener noreferrer">
+            <img src="images/parasite.jpg" alt="Pôster do filme Parasita (Parasite)" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">Parasita</p>
+              <p class="year">2019</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/Parasita_(filme)" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartão 6 -->
+        <article class="card">
+          <a href="https://pt.wikipedia.org/wiki/Pulp_Fiction" target="_blank" rel="noopener noreferrer">
+            <img src="images/pulpfiction.jpg" alt="Pôster Pulp Fiction" class="thumb">
+          </a>
+          <div class="meta">
+            <div>
+              <p class="title">Pulp Fiction</p>
+              <p class="year">1994</p>
+            </div>
+            <div class="links">
+              <a href="https://pt.wikipedia.org/wiki/Pulp_Fiction" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <footer>
+      Arquivos necessários: filmes.html + pasta images/ contendo as imagens referenciadas.
+    </footer>
+  </div>
+</body>
+</html>
