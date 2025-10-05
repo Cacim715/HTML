@@ -1,0 +1,51 @@
+a. Quais elementos são os vizinhos de <main>?
+
+No HTML, vizinhos (siblings) são elementos que compartilham o mesmo elemento pai.
+
+<main> está dentro de <body>.
+
+Outros elementos filhos de <body>: <header> e <footer>.
+
+✅ Resposta:
+<header> e <footer> são os vizinhos de <main>.
+
+b. Quais elementos são os ancestrais de <ul>?
+
+Ancestrais são todos os elementos acima na hierarquia do elemento.
+
+<ul> está dentro de <nav> → <header> → <body> → <html>.
+
+✅ Resposta:
+<nav>, <header>, <body>, <html> são os ancestrais de <ul>.
+
+c. Quais elementos são filhos de <header>?
+
+Filhos são os elementos imediatamente dentro de outro elemento.
+
+<header> contém:
+
+<h1>
+
+<nav>
+
+✅ Resposta:
+<h1> e <nav> são os filhos de <header>.
+
+d. Qual o nível de profundidade do aninhamento entre <html> e <strong> do primeiro artigo?
+
+Contamos cada camada do <html> até o <strong>:
+
+<html>
+
+<body>
+
+<main>
+
+<article> (primeiro artigo)
+
+<p>
+
+<strong>
+
+✅ Resposta:
+O <strong> está no 6º nível de profundidade a partir de <html>.
