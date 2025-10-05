@@ -1,0 +1,36 @@
+1- em html cada tag tem uma função. serve pra formatar o texto dentro da página.
+2- O que é um elemento vazio?
+
+Um elemento vazio em HTML é um elemento que não possui conteúdo interno, ou seja, não tem tags de abertura e fechamento separadas, apenas uma única tag.
+Ele não envolve texto nem outros elementos.
+
+Funcionalidade
+
+Serve para inserir algo no documento sem precisar de conteúdo interno.
+
+Geralmente é usado para:
+
+Inserir imagens (<img>),
+
+Criar quebras de linha (<br>),
+
+Inserir links para ícones ou metadados (<link>),
+
+Inserir áreas de entrada em formulários (<input>).
+
+Exemplos de elementos vazios
+
+<img> — insere uma imagem.
+
+<img src="foto.jpg" alt="Minha foto">
+
+
+<br> — insere uma quebra de linha.
+
+Linha 1<br>Linha 2
+
+
+(Bônus) <hr> — insere uma linha horizontal.
+
+<hr>
+ 
