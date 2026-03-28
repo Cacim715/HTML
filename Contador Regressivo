@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem Regressiva</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .timer {
+      font-size: 40px;
+      font-weight: bold;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .finalizado {
+      color: #22c55e;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contagem Regressiva</h1>
+    <div id="timer" class="timer">Carregando...</div>
+    <div id="mensagem" class="finalizado"></div>
+  </div>
+
+  <script>
+    function calcularTempoRestante(dataFutura) {
+      const agora = new Date();
+      const diferenca = new Date(dataFutura) - agora;
+
+      if (diferenca <= 0) {
+        return { dias: 0, horas: 0, minutos: 0, segundos: 0 };
+      }
+
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferenca / 1000) % 60);
+
+      return { dias, horas, minutos, segundos };
+    }
+
+    function atualizarTemporizador(dataFutura) {
+      const tempo = calcularTempoRestante(dataFutura);
+
+      document.getElementById("timer").innerText =
+        `${tempo.dias}d ${tempo.horas}h ${tempo.minutos}m ${tempo.segundos}s`;
+
+      if (
+        tempo.dias === 0 &&
+        tempo.horas === 0 &&
+        tempo.minutos === 0 &&
+        tempo.segundos === 0
+      ) {
+        clearInterval(intervalo);
+        document.getElementById("mensagem").innerText = "⏰ Tempo esgotado!";
+      }
+    }
+
+    const dataFutura = "2026-12-31T23:59:59";
+
+    const intervalo = setInterval(() => {
+      atualizarTemporizador(dataFutura);
+    }, 1000);
+
+    atualizarTemporizador(dataFutura);
+  </script>
+
+</body>
+</html>
