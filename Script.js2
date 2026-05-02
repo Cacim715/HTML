@@ -1,0 +1,31 @@
+const pessoas = [];
+
+const nomeInput = document.getElementById('nomeInput');
+const curtirBtn = document.getElementById('curtirBtn');
+const resultado = document.getElementById('resultado');
+
+function atualizarTexto() {
+  const total = pessoas.length;
+
+  if (total === 0) {
+    resultado.textContent = 'Ninguém curtiu';
+  } else if (total === 1) {
+    resultado.textContent = `${pessoas[0]} curtiu`;
+  } else if (total === 2) {
+    resultado.textContent = `${pessoas[0]} e ${pessoas[1]} curtiram`;
+  } else {
+    resultado.textContent =
+      `${pessoas[0]}, ${pessoas[1]} e mais ${total - 2} pessoas curtiram`;
+  }
+}
+
+curtirBtn.addEventListener('click', () => {
+  const nome = nomeInput.value.trim();
+
+  if (nome !== '' && !pessoas.includes(nome)) {
+    pessoas.push(nome);
+    atualizarTexto();
+  }
+
+  nomeInput.value = '';
+});
